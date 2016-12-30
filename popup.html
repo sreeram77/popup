@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html, body {
+    margin: 0;
+    padding: 0px;
+	font-family:arial;
+}
+
+.modal {
+    display: none; 
+    position: absolute; 
+	z-index: 1;
+    bottom: 0%;
+    right: 0%;
+    width: 40%; 
+	padding-bottom:5px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #d3d3d3;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animate;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animate;
+    animation-duration: 0.5s
+}
+
+@-webkit-keyframes animate {
+    from {right:-200px; opacity:0} 
+    to {right:0; opacity:1}
+}
+
+@keyframes animate {
+    from {right:-200px; opacity:0}
+    to {right:0; opacity:1}
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+	font-weight: bold;
+    color: black;
+}
+
+.modal-body {
+	padding-bottom: 16px;
+	color: white;
+	background-color: #ededed;
+	width: 200px;
+	margin: 10px;
+	height: 310px
+}
+
+.img {
+	display: block;
+	max-width:200px;
+	max-height:200px;
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.head-border {
+	background-color: #d3d3d3;
+	width: 100%;
+	height: 30%;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #d3d3d3;
+}
+
+.texty {
+	position: absolute;
+	bottom: 0;
+	padding: 20px; 
+	color: black;
+	text-align:bottom;
+}
+
+</style>
+</head>
+<body>
+<div class="head-border">
+<h2 style="padding: 10px;">YOURSTORE.COM</h2>
+</div>
+<h2 style="text-align: center; color:grey; margin-top:200px; ">PAGE CONTENT</h2>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <p style="padding: 10px; font-weight:200;">Are you looking for <b>White Dress</b>?</p>
+    </div>
+	<a href="#" style="text-decoration:none;">
+    <div class="modal-body" style="float:right;">
+	<!-- Image 2 goes here-->
+	  <img src="images/p1.jpg" alt="WoW!" class="img" >
+	   <h4 class="texty">Cotton Dresses<br/><br/><small>See more</small></h5>
+    </div>
+	</a>
+	<a href="#" style="text-decoration:none;">
+	<div class="modal-body">
+	<!-- Image 2 goes here-->
+	  <img src="images/g1.jpg" alt="WoW!" class="img" >
+	  <h4 class="texty">Cotton White Dresses<br/><br/><small>See more</small></h5>
+    </div>
+	</a>
+  </div>
+</div>
+
+<script>
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+
+window.onload = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
